@@ -17,3 +17,5 @@ conda activate assistant
 '''bash
 pip install -r requirements.txt
 '''
+
+AIzaSyCABneWnGTe9TECVjrLkSpkzH5qlnfcZQI

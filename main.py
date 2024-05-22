@@ -38,7 +38,7 @@ def takeCommand():
 
         try:
             print("Recognizing...")
-            query = r.recognize_google(audio, language='en-in')
+            query = r.recognize_google(audio, language = 'en-in')
             print(f"User said: {query}\n")
 
         except Exception as e:
@@ -69,7 +69,6 @@ def wish_me():
 if __name__ == "__main__":
 
     wish_me()
-
     while True:
         query = takeCommand().lower()
 
@@ -81,12 +80,12 @@ if __name__ == "__main__":
             print(results)
             speak(results)
 
-        
+            
         elif "youtube" in query:
             speak("Opening YouTube")
             webbrowser.open("youtube.com")
 
-        
+            
         elif "google" in query:
             speak("Opening google")
             webbrowser.open("google.com")
@@ -97,13 +96,13 @@ if __name__ == "__main__":
             webbrowser.open("github.com")
 
 
-        
-         #This query for say the times
+            
+        #This query for say the times
         elif 'time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"Sir the time is {strTime}")
 
 
-        elif 'goodbye' in query:
+        elif 'goodbye' in query or 'get lost' in query:
             speak("ok sir. I am always here for you. bye bye")
             exit()
